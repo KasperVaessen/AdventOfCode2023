@@ -42,9 +42,9 @@ with open('12/input.txt', 'r') as f:
     total = 0
     total2 = 0
     for line in input:
-        string = '.' + line[0] + '.' 
+        string = line[0] + '.'
         checksum = tuple([int(num) for num in line[1]])
-        string2 = '.' + line[0]+ '?'+line[0]+'?'+line[0]+'?'+ line[0] + '?' + line[0] + '.' 
+        string2 = line[0] + '?' + line[0] + '?' + line[0] + '?' + line[0] + '?' + line[0] + '.' 
         checksum2 = tuple([int(num) for num in line[1]]*5)
 
         ans = find_solution2(string, checksum)
